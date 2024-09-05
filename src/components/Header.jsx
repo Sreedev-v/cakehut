@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { BsBasket3 } from "react-icons/bs";
-
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -56,25 +55,56 @@ const Header = () => {
           </div>
           <div className="grid grid-cols-8">
             <div className="col-span-2 flex item-center">
-              <Link to="/" className="text-4xl font-bold "> CAKEHUT <span className='text-amber-600'>.</span></Link>
+              <Link to="/" className="text-4xl font-bold ">
+                {" "}
+                CAKEHUT <span className="text-amber-600">.</span>
+              </Link>
             </div>
             <div className="hidden sm:ml-6 sm:flex sm:space-x-4 text-lg col-span-5">
-              <Link to="/" className="text-amber-950 hover:bg-amber-900 hover:text-white px-3 py-2 rounded-md font-medium">CAKES</Link>
-              <Link to="/" className="text-amber-950 hover:bg-amber-900 hover:text-white px-3 py-2 rounded-md font-medium">BREADS</Link>
-              <Link to="/" className="text-amber-950 hover:bg-amber-900 hover:text-white px-3 py-2 rounded-md font-medium">DESSERTS</Link>
-              <Link to="/aboutus" className="text-amber-950 hover:bg-amber-900 hover:text-white px-3 py-2 rounded-md font-medium">ABOUT US</Link>
-              <Link to="/contactus" className="text-amber-950 hover:bg-amber-900 hover:text-white px-3 py-2 rounded-md font-medium">CONTACT</Link>
+              <Link
+                to="/cakes"
+                className="text-amber-950 hover:bg-amber-900 hover:text-white px-3 py-2 rounded-md font-medium"
+              >
+                CAKES
+              </Link>
+              <Link
+                to="/breads"
+                className="text-amber-950 hover:bg-amber-900 hover:text-white px-3 py-2 rounded-md font-medium"
+              >
+                BREADS
+              </Link>
+              <Link
+                to="/desserts"
+                className="text-amber-950 hover:bg-amber-900 hover:text-white px-3 py-2 rounded-md font-medium"
+              >
+                DESSERTS
+              </Link>
+              <Link
+                to="/aboutus"
+                className="text-amber-950 hover:bg-amber-900 hover:text-white px-3 py-2 rounded-md font-medium"
+              >
+                ABOUT US
+              </Link>
+              <Link
+                to="/contactus"
+                className="text-amber-950 hover:bg-amber-900 hover:text-white px-3 py-2 rounded-md font-medium"
+              >
+                CONTACT
+              </Link>
             </div>
-            <div className='flex items-center justify-end text-2xl '>
-              <Link to={'/cart'} className='text-black px-3 py-2 rounded-full bg-white'><BsBasket3 className='bg-transparent'/></Link>
+            <div className="flex items-center justify-end text-2xl ">
+              <Link
+                to={"/cart"}
+                className="text-black px-3 py-2 rounded-full bg-white"
+              >
+                <BsBasket3 className="bg-transparent" />
+              </Link>
             </div>
           </div>
         </div>
       </div>
-      <div className={`md:hidden ${isOpen ? 'block' : 'hidden'}`}>
-        <div className="px-2 pt-2 pb-3 space-y-1">
-          ...
-        </div>
+      <div className={`md:hidden ${isOpen ? "block" : "hidden"}`}>
+        <div className="px-2 pt-2 pb-3 space-y-1">...</div>
       </div>
     </nav>
   );
